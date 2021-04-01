@@ -1,0 +1,113 @@
+body {
+    background: rgb(232, 241, 243);
+    color:rgb(17, 14, 14);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 10%;
+    background-image: url(4.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+    }
+#pid {
+color: red;
+    }
+#divid {
+color: rgb(238, 178, 12);
+    }
+/*以下为属性选择器*/
+*[title] {
+    color: blue;
+}
+*[title=te] {
+    color: red;
+}
+a[href][title] {
+    color: rgb(73, 182, 100);
+}
+img[alt] {
+    border: 5px dotted rgb(85, 147, 228);
+}
+planet[moons="1"] {
+    color: rgb(230, 161, 71);
+}
+a[href*="w3school.com.cn"] {
+    font-size: 35px;
+}
+p.span span {
+    color: brown;
+}
+p.span {
+    width: 800px;
+    font-size: 25px;
+}
+*[lang|="en"] {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(243, 97, 40);
+}
+#p1 {
+    text-transform: capitalize;
+}
+#p2 {
+    text-transform: lowercase;
+    font-family: fantasy;
+}
+#p3 {
+    text-transform: uppercase;/*全部大写*/
+    text-shadow: 10px 5px 4px;
+}
+a:link {
+    color: rgb(105, 178, 228);
+    background-color: cornflowerblue;
+}
+a:visited {
+    color: rgb(231, 69, 69);
+}
+a:hover {
+    color: green;
+}
+a:active {
+    color: green;
+}
+#div1 ul li{
+    list-style: none;
+}
+#div1 {
+    width: 950px;
+    height: auto; 
+    margin: 20px auto;
+}
+#div1 ul {
+    width: 250px;
+    float: left;
+}
+
+.container {
+    margin: 50px;
+}
+.bd {
+    border-style: groove;
+}
+.pd {
+    padding: 50px;
+}
+.content {
+    background-color: rgb(149, 176, 233);
+    text-align:  center;
+    height: 50px;
+}
+
+.container1 {
+    margin: 10px;
+}
+.bd1 {
+    border-style: groove;
+}
+.pd1 {
+    padding: 50px;
+}
+.content1 {
+    background-color: rgb(149, 176, 233);
+    text-align:  center;
+    height: 50px;
+}

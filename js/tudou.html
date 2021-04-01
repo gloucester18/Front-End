@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>tudou</title>
+    <style></style>
+    <script type="text/javascript" src="move.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        var oBtnShow = document.getElementById("but");
+        var oBtnClose = document.getElementById("btn_close");
+        var oBottom = document.getElementById("zns_bottom");
+        var oBox = document.getElementById("zns_box");
+
+        oBtnShow.onclick = function() {
+          startMove(oBottom, "right", 0, function() {
+            oBox.style.display = "block";
+            startMove(oBox, "bottom", 0);
+          });
+        };
+        oBtnClose.onclick = function() {
+          startMove(oBox, "bottom", -315, function() {
+            oBox.style.display = "none";
+            startMove(oBottom, "right", -165);
+          });
+        };
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

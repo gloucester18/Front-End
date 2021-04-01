@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        var oTab = document.getElementById("tab1");
+        var oBtn = document.getElementById("btn1");
+        var oName = document.getElementById("name");
+        var oAge = document.getElementById("age");
+        var id = oTab.tBodies[0].rows.length + 1;
+
+        oBtn.onclick = function() {
+          var oTr = document.createElement("tr");
+
+          var oTd = document.createElement("td");
+          oTd.innerHTML = id;
+          //   var oTd_prime = oTd.cloneNode(true);
+          id++;
+          //   document.oTr.appendChild(oTd_prime);
+          oTr.appendChild(oTd);
+
+          var oTd = document.createElement("td");
+          oTd.innerHTML = oName.value;
+          oTr.appendChild(oTd);
+
+          var oTd = document.createElement("td");
+          oTd.innerHTML = oAge.value;
+          oTr.appendChild(oTd);
+
+          var oTd = document.createElement("td");
+          oTd.innerHTML = '<a href="javascript:;">shan</a>';
+          oTr.appendChild(oTd);
+
+          oTd.getElementsByTagName("a")[0].onclick = function() {
+            oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+          };
+          oTab.tBodies[0].appendChild(oTr);
+        };
+      };
+    </script>
+  </head>
+  <body>
+    NAME: <input type="text" id="name" /> AGE: <input type="text" id="age" />
+    <input type="button" id="btn1" value="添加" />
+    <table id="tab1" border="2" width="300px">
+      <thead>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+        <td>操作</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>a</td>
+          <td>18</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>b</td>
+          <td>19</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>c</td>
+          <td>20</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

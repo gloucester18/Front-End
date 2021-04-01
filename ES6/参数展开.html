@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数组/json展开</title>
+    <script>
+      //数组展开
+      let arr1 = [1, 1, 2, 2];
+      let arr2 = [1, 2, 2];
+      let json = { a: 1, b: 2 };
+      let json2 = { ...json, c: 3 };
+      function show(a, b, c, d) {
+        alert(a + b + c + d);
+      }
+      show(...arr1);
+      let result = [...arr1, ...arr2];
+      alert(result);
+      console.log(json2);
+    </script>
+  </head>
+  <body></body>
+</html>

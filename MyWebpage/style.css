@@ -1,0 +1,42 @@
+body {
+    background: rgb(104, 108, 109);
+    color:whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 10%;
+
+}
+header {
+   background: rgb(233, 151, 29);
+   padding: 20px;
+}
+section {
+   background:burlywood;
+   padding: 10px;
+   display: flex;
+   flex-direction: row;
+}
+footer {
+   padding: 10px;
+}
+div {
+   background: rgb(180, 138, 20) ;
+   margin: auto;
+   width: 100px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    
+}
+li {
+    
+    margin-right: 20px;
+   
+}
+#G {
+   color: rgb(219, 140, 21);
+}
+
+
+/* 这里是注释 */

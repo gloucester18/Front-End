@@ -1,0 +1,38 @@
+* {margin: 0;padding: 0;}
+/* :root {background-color: black;} */
+ul,ol {list-style: none;width: 1080px;}
+img {display: block;}
+a {text-decoration: none;color: rgb(20, 91, 150);}
+h1,h2,h3 {font-size: 16px;}
+/* body {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;} */
+body {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.l {float: left;}
+.r {float: right;}
+.clear::after {content: ''; display: block; clear: both;}
+.container {width: 1080px; margin: 0 auto; position: relative;}
+.container-fluid{width: 100%;}
+
+#head {height: 80px; background-color: lightsteelblue;}
+#head .head_menu {font-size: 14px;line-height: 80px;}
+#head .head_menu li {float: left; margin-left: 58px;}
+
+#service {
+    overflow: hidden;
+    min-height: 400px;
+}
+.area_title {
+    background-color: rgb(228, 234, 241); 
+    margin-top: 60px;
+    text-align: center;
+}
+.area_title h2 {
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    color: rgb(18, 82, 146);
+}
+.area_title p {
+    color: rgb(97, 154, 204);
+    font-size: 14px;
+    line-height: 34px;
+}

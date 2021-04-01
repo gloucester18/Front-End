@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div {
+        position: absolute;
+        left: 0;
+        height: 100px;
+        width: 100px;
+        background-color: rgb(163, 165, 19);
+      }
+    </style>
+  </head>
+  <body>
+    <button></button>
+    <div></div>
+    <script>
+      // 目标对象 obj 目标位置 target
+      function animate(obj, target) {
+        //   给不同的元素指定不同定时器 obj.timer  timer为obj一属性
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function() {
+          if (obj.offsetLeft >= target) {
+            clearInterval(obj.timer);
+          }
+          obj.style.left = obj.offsetLeft + 1 + "px";
+        }, 30);
+      }
+      var div = document.querySelector("div");
+      var btn = document.querySelector("button");
+
+      btn.addEventListener("click", function() {
+        animate(div, 300);
+      });
+    </script>
+  </body>
+</html>

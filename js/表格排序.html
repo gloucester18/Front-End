@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      window.onload = function() {
+        var oTab = document.getElementById("tab1");
+        var oBtn = document.getElementById("btn1");
+
+        oBtn.onclick = function() {
+          var arr = [];
+          for (var i = 0; i < oTab.tBodies[0].rows.length; i++) {
+            arr[i] = oTab.tBodies[0].rows[i];
+          }
+          arr.sort(function(tr1, tr2) {
+            var n1 = parseInt(tr1.cells[0].innerHTML);
+            var n2 = parseInt(tr2.cells[0].innerHTML);
+            return n1 - n2;
+          });
+          for (var i = 0; i < arr.length; i++) {
+            oTab.tBodies[0].appendChild(arr[i]);
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <input type="button" id="btn1" value="排序" />
+    <table id="tab1" border="1" width="500">
+      <thead>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>ab</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>gh</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>cd</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ef</td>
+          <td>20</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>匀速运动停止</title>
+    <style>
+      #div1 {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 500px;
+        background-color: rgb(223, 108, 108);
+      }
+      #div2 {
+        height: 500px;
+        width: 1px;
+        left: 100px;
+        background: #000;
+        position: absolute;
+      }
+      #div3 {
+        height: 500px;
+        width: 1px;
+        left: 300px;
+        background: #000;
+        position: absolute;
+      }
+    </style>
+    <script>
+      var timer = null;
+      function startMove(iTarget) {
+        var oDiv = document.getElementById("div1");
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var speed = 0;
+          if (oDiv.offsetLeft < iTarget) {
+            speed = 7;
+          } else {
+            speed = -7;
+          }
+          if (Math.abs(iTarget - oDiv.offsetLeft) <= 7) {
+            clearInterval(timer);
+            oDiv.style.left = iTarget + "px";
+          } else {
+            oDiv.style.left = oDiv.offsetLeft + speed + "px";
+          }
+        }, 30);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="到100" onclick="startMove(100)" />
+    <input type="button" value="到300" onclick="startMove(300)" />
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+  </body>
+</html>

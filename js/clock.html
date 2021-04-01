@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clock</title>
+    <script>
+      function toDou(n) {
+        if (n < 10) {
+          return "0" + n;
+        } else {
+          return "" + n;
+        }
+      }
+      window.onload = function() {
+        var aImg = document.getElementsByTagName("img");
+        function tick() {
+          var oDate = new Date();
+          var str =
+            toDou(oDate.getHours()) +
+            toDou(oDate.getMinutes()) +
+            toDou(oDate.getSeconds());
+          for (var i = 0; i < aImg.length; i++) {
+            // str.charAt(index) : 从一个字符串中返回指定的字符
+            aImg[i].src = "img/" + charAt(i) + ".png";
+          }
+        }
+        setInterval(tick, 1000);
+        tick();
+      };
+    </script>
+  </head>
+  <body style="background: black;color: white;font-size: 50px;">
+    <img src="img/0.png" alt="" />
+    <img src="img/1.png" alt="" />
+    :
+    <img src="img/3.png" alt="" />
+    <img src="img/3.png" alt="" />
+    :
+    <img src="img/4.png" alt="" />
+    <img src="img/5.png" alt="" />
+  </body>
+</html>

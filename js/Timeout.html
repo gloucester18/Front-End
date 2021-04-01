@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div {
+        float: left;
+        margin: 20px;
+      }
+      #div1 {
+        background-color: red;
+        height: 50px;
+        width: 50px;
+      }
+      #div2 {
+        background-color: antiquewhite;
+        height: 300px;
+        width: 200px;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        var oDiv1 = document.getElementById("div1");
+        var oDiv2 = document.getElementById("div2");
+        var timer = null;
+
+        oDiv2.onmouseover = oDiv1.onmouseover = function() {
+          clearTimeout(timer);
+          oDiv2.style.display = "block";
+        };
+        // 函数setTimeout的返回值timeoutID是一个正整数，表示定时器的编号。这个值可以传递给clearTimeout()来取消该定时器。
+        oDiv2.onmouseout = oDiv1.onmouseout = function() {
+          timer = setTimeout(function() {
+            oDiv2.style.display = "none";
+          }, 500);
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Gloucester's Page</title>
+        <meta charest="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="小甲鱼,web开发,HTML5,CSS3,Web编程教学"
+        <meta name="description" content=".....">
+        <meta name="author" content="xiaojiayu">
+        <!-- <meta http-equiv="refresh" content="5;http://bbs.fishc.com"> -->
+        <link rel="stylesheet" href="style.css">
+        <!--css位于style.css中-->
+            <style media="print">
+                h1 {
+                    color: black;
+                }
+                h2 {
+                    color: black;
+                }
+            </style>
+            <style media="screen and (min-width:555px) and (max-width:1000px)">
+            </style>
+    <script type="text/javascript">
+        document.write("........")
+    </script>
+    </head>
+        <body>
+            <h1>My Webpage</h1>
+            <h2>About Me</h2>
+            <p>
+                Get started!
+            </p>
+
+            <p>
+            <abbr title="鱼C工作室">Fishc.com</abbr> was founded in 2010.
+            </p>
+
+            <p>
+                <dfn>HTML</dfn>是一门用于<strong>创建网页</strong>的标准标记语言。
+                <!-- <dfn>标签：专业术语 -->
+            </p>
+        <ul>
+                <li>I'm an item</li>
+                <li>I'm an item</li>
+                <li>I'm an item</li>
+        </ul>
+        <br>
+
+        <ruby>魑<rt>chī</rt></ruby>
+        <ruby>魅<rt>mèi</rt></ruby>
+        <ruby>魍<rt>wáng</rt></ruby>
+        <ruby>魉<rt>liáng</rt></ruby>
+        <br>
+
+        <p>
+            <del>test1</del> <br>
+            <ins>test2</ins>
+        </p>
+        <p><mark>1</mark>，<mark>2</mark>，<mark>3</mark>Which one?</p>
+        <br>
+
+        <ol>
+            <li>framework</li>
+            <ul>
+               <li>Vue</li>
+               <li>React</li>
+               <li>Angular</li>
+            </ul>
+        </ol>
+        <ol start="2">
+            <li>testing your apps</li>
+            <ul>
+                <li>Jest</li>
+                <li>Mocha</li>
+                <li>Carma</li>
+                <li>Enzyme</li>
+            </ul>
+        </ol>
+        <ol start="3">
+            <li>服务器渲染</li>
+            <ul>
+                <li>React:Next.js/Afer.js</li>
+                <li>Angular:Universal</li>
+                <li>Vue:Nuxt</li>
+            </ul>
+            </ol>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Locations</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </section>
+        <section>lower-section</section>
+
+            <!--以下是 表单-->
+        <form action="welcome.php" method="post">
+            <label for="name">what's your name?<input type="text" name="name" id="name"></label><br>
+            <!--for里的值对应input里id值-->
+            <label for="gay">are you a boy or girl?<input type="text" name="gay" id="gay"></label><br>
+        </form>
+
+        <fieldset>
+            <legend>基本信息</legend>
+            <lable for="name">NAME:</lable><input type="text" name="name" id="name">
+            <lable for="name">SEX:
+                <select name="sex">
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+                </select>
+            </lable>
+            <lable for="name">AGE:</lable><input type="text" name="age" id="age">
+        </fieldset>
+
+        <!--practice-->
+        <form action="welcom.php" method="POST">
+            NAME:<input type="text" name="name">
+            EMAIL:<input type="text" name="email">
+            <input type="submit" value="提交">
+            <input type="button" value="重写">
+            <input type="reset" onclick="msg()" value="点我">
+        </form>
+
+        <script>
+            function msg{
+                alert("who are you");
+            } 
+        </script>
+
+        <!--将下拉列表改为多选框-->
+        <input type="checkbox" name="heros[]" value="deadpool">死侍
+
+        <!--演示时间和日期-->
+        <label>时间：<input type="time" name="time"></label>
+        <br><br>
+        <label>日期：<input type="date" name="date"></label>
+        <br><br>
+        <label>年月：<input type="month" name="month"></label>
+        <br><br>
+        <label>星期：<input type="week" name="week"></label>
+        <br><br>
+        <label>本地日期和时间：<input type="datetime-local" name="datetime-local"></label>
+        <br><br>
+        <input type="submit" value="提交">
+
+        <!--search-->
+        <label>which class do you want to watch?<input type="search" name="search"></label>
+
+        <!--input实现颜色选择-->
+        <label>选个颜色：<input type="color"></label>
+
+        <!--input的hidden属性-->
+        <!--file上传-->
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <!--限制文件上传尺寸-->
+        <input type="hidden" name="MAX_FILE_SIZE" value="1024">
+        <label>选择文件：<input type="file" name="file" accept="image/*" multiple></label>
+        <br>
+        <input type="submit" value="提交">
+        </form>
+        <!--限定数字输入范围-->
+        <form action="welcome.php" method="POST" enctype="multipart/form-data">
+        <label>数字输入<input type="number" name="age" min="1" max="100" step="1"></label>
+        <br>
+        <!--input实现数值滚动条-->
+        <label>数值滚动条<input type="range" name="love"  value="1" min="1" max="10000" step="100">分</label>
+        <br>
+        <!--指定输入框为必填-->
+        <form action="welcome.php" method="POST">
+        <label>邮箱：<input type="email" name="email" pattern="\w[-\w.+]*@(gmail.com|163.com" placeholder="仅限gmail/163邮箱" required></label>
+        <br><br>
+        <label>电话：<input type="tel" name="tel" pattern="(\(\d{3,4}\)|\d{3,4}-|\s)?\d{8}" placeholder="仅限座机号码" required></label>
+        <br><br>
+        <label>网址：<input type="url" name="url" pattern="^((https|http)?:\/\/)[^\s]+" placeholder="" required size="30" maxlength="22" list="urllist"></label>
+        <br><br>
+        <input type="submit" value="提交">
+        </form>
+        <datalist id="urllist">
+            <option value="https://www.std-frank.club/friends/">友链</option>
+            <option value="https://bbs.xdsec.org/">协会bbs</option>
+            <option value="https://www.w3school.com.cn/">w3school</option>
+        </datalist>
+        <!--<details> 标签用于定义用户可见的或者隐藏的需求的补充细节。-->
+        <details>
+            <summary>《零基础入门学习》</summary>
+            <p>配有同名书籍。</p>
+            <p>配有视频教程</p>
+        </details>
+    
+        <details open> <!--open属性默认为展开状态-->
+            <p>配有同名书籍。</p>
+            <p>配有视频教程</p>
+        </details>
+    
+        <details>
+            <p>配有同名书籍。</p>
+            <p>配有视频教程</p>
+        </details>
+        <!--<article> 标签用于定义一篇文章，与页面其它部分无关。-->
+        <article>
+            <h1>This ia an article.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto cumque debitis ea explicabo facere fugit hic iusto nihil, nulla officia officiis omnis placeat quae quis repudiandae similique sunt voluptatibus?</p>
+        </article>
+
+        <!--阻止视频预加载-->
+        <video width="640" height="352" src="source.mp4" preload="metadata"></video>
+
+        <!--嵌入视频or地图-->
+        <iframe src="https://fishc.com.cn" width="1000px" height="600px" sandbox="allow-popups">插入</iframe>
+
+        <p>Your progress:</p>
+        <progress max="1" value="0.5"></progress>
+
+        <!--css练习(内联样式-->
+        <p style="color:coral; font-size: 15px;">I love html.</p>
+        <!--css内部样式表-->
+
+
+        <br><br>
+        <footer style="text-align: center;"><dfn>-Created By <strong id="G">Gloucester</strong>-</dfn></footer>
+        <br>
+        <address>
+            email: gloucester2018@163.com <br>
+            phone number: ...
+        </address>
+
+        </body>
+</html>

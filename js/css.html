@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+    <script>
+      // 解决兼容性问题
+      function cssFF(obj, name, value) {
+        if (arguments.length == 2) {
+          // 获取非行间样式
+          return getComputedStyle(obj, false)[name];
+        } else {
+          getComputedStyle(obj, false)[name] = value;
+        }
+      }
+
+      function cssIE(obj, name, value) {
+        if (arguments.length == 2) {
+          // 获取非行间样式
+          return obj.currentStyle[name];
+        } else {
+          obj.currentStyle[name] = value;
+        }
+      }
+      window.onload = function() {
+        var oDiv = document.getElementById("div1");
+        if (oDiv.currentStyle) {
+          alert(cssIE(oDiv, "backgroundColor"));
+        } else {
+          alert(cssFF(oDiv, "backgroundColor"));
+        }
+        //   css(oDiv, "background", "green");
+      };
+    </script>
+  </head>
+  <body>
+    <div id="div1"></div>
+  </body>
+</html>

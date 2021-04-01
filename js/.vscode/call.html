@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      function show(a, b) {
+        alert("this是：" + this + "\na是" + a + "\nb是：" + b);
+      }
+      show.call("this", 12, 5);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var arr1 = [1, 2, 3];
+      var arr2 = [12, 8, 99, 19, 112];
+      //   //从尾部添加
+      //   arr.push(7);
+      //   //从头部添加
+      //   arr.unshift(0);
+      //   //从尾部弹出
+      //   arr.pop();
+      //   //从头部弹出
+      //   arr.shift();
+
+      //   删除：splice(起点,长度)
+      //   arr.splice(2, 3);
+      //   插入/删除：splice(起点，长度，元素)
+      arr1.splice(1, 2, "a", "b");
+      // 比较函数
+      //   arr.sort([compareFunction])
+      arr2.sort(function(a, b) {
+        return a - b;
+      });
+      alert(arr1);
+      //   连接两个数组
+      alert(arr1.concat(arr2));
+      alert(arr1.join("- -p"));
+      //   排序，sort只认识字符串，需设置比较函数，如果conpareFunction(a,b)大于0，b会被排列到a前面
+      alert(arr2);
+    </script>
+  </head>
+  <body></body>
+</html>

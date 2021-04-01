@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <style>
+        #banner {position: relative;}
+        #banner .banner_list {width: 100%; height: 500px; position: relative;}
+        #banner .banner_list li {width:100%; height: 100%;background: center no-repeat; position: absolute; left: 0;top: 0;opacity: 0;z-index: 1;}
+        #banner .banner_list a {display: block; width: 100%; height: 100%;} 
+        #banner .banner_list li.active {opacity: 1; z-index: 10;}
+        #banner .banner_btn {width: 100%; position: absolute; bottom: 19px; z-index: 20; font-size: 0; text-align: center; display: block;}
+        #banner .banner_btn li{display: inline-block; width: 12px;height: 12px;border: 1px solid rgb(252, 250, 250); position: relative; border-radius:50%; box-sizing: border-box; margin: 0 6px; cursor: pointer;}
+        #banner .banner_btn li .active {background:white;}
+        #service .service_list { text-align: center; margin-top: 34px;}
+        #service .service_list li {float: left; width: 250px; margin: 0 10px;}
+        #service .service_list div { width: 100px; height: 100px; margin: 0 auto;}
+        #service .service_list li:nth-of-type(1) div {background-image: url(./images/10.png);}
+        #service .service_list li:nth-of-type(2) div {background-image: url(./images/11.jpeg);} 
+        #service .service_list li:nth-of-type(3) div {background-image: url(./images/12.jpeg);} 
+        #service .service_list li:nth-of-type(4) div {background-image: url(./images/13.jpeg);} 
+ 
+        #service .service_list h3 {color: rgb(18, 111, 187);}
+        #service .service_list p {}
+
+        #case {background: #f8f8f8;}
+        #case .container { min-height: 460px; overflow: hidden;}
+        #case .area_title { margin-top: 55px;}
+        #case .case_list { margin-top: 28px; }
+        #case .case_list li { float: left; width: 196px; margin: 0 80px;} 
+        #case .case_btn { width: 176px; height: 37px; background: rgb(120, 167, 206); margin: 0 auto; border-radius: 15px; line-height: 37px; text-align: center;font-size: 14px; margin-top: 36px;}
+        #case .case_btn a {display: block; width: 100%; height: 100%; color: white;} 
+
+        #news {min-height: 450px; overflow: hidden;}
+        #news .area_title {margin-top: 68px; } 
+        #news dl {margin-top: 48px;}
+        #news dt {width: 256px;}
+        #news dt img {width: 256px;}
+        #news dd {width: 824px;}
+        #news .news_list {width: 100%;}
+        #news .news_list li{width: 50%; float: left;} 
+        #news .news_date {width: 70px; height: 70px; border-right: 1px solid #dcdcdc; float: left;}
+        #news .news_date i {color: #66c5b4; font-size: 39px; text-align: center; display: block; font-weight: bolder;} 
+        #news .news_date span {color: #999999; font-size: 20px; line-height: 36px; text-align: center; display: block;} 
+        #news .news_text {width: 290px; margin-left: 20px; float: left;}
+        #news .news_text h3 {font-size: 14px; color: #3F3F3F;} 
+        #news .news_text p {color: #A4A4A4; font-size: 12px; line-height: 21px; margin-top: 15px;} 
+
+        #news .news_text .ell {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+    </style>
+</head>
+<body>
+    <div id="head" class="container">
+        <div class="head_logo">
+            <a href="#">
+                <img src="" alt="">
+            </a>
+        </div>
+        <ul class="head_menu r">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Service</a>
+            </li>
+            <li>
+                <a href="#">News</a>
+            </li>
+            <li>
+                <a href="#">Contacts</a>
+            </li>
+        </ul>
+    </div>
+    <div id="banner" class="container_fluid">
+        <ul class="banner_list">
+            <li class="active" style="background-image: url(./images/xdmy.png);">
+                <a href="#"></a>
+            </li>
+            <li style="background-image: url(./images/sec.png)">
+                <a href="#"></a>
+            </li>
+            <li style="background-image: url(./images/thi.png)">
+                <a href="#"></a>
+            </li>
+        </ul>
+        <ol class="banner_btn">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <div id="service" class="container">
+        <div class="area_title">
+            <h2>技术方向</h2>
+            <p>OUR PARTS</p>
+        </div>
+        <ul class="service_list">
+            <li>
+                <div></div>
+                <h3>web开发</h3>
+                <p></p>
+            </li>
+            <li>
+                <div></div>
+                <h3>游戏制作</h3>
+                <p></p>
+            </li>
+            <li>
+                <div></div>
+                <h3>信息安全</h3>
+                <p></p>
+            </li>
+            <li>
+                <div></div>
+                <h3>ACM</h3>
+                <p></p>
+            </li> 
+        </ul>
+    </div>
+    <div id="case" class="service_fluid">
+        <div class="container">
+            <div class="area_title">
+                <h2>【客户案例】</h2>
+                <p></p>
+            </div>
+            <ul class="case_list clear">
+                <li>
+                    <a href="#"><img style="width: 196px;height: 106px;" src="./images/1.jpeg"></a>
+                </li>
+                <li>
+                    <a href="#"><img style="width: 196px;height: 106px;" src="./images/2.jpeg"></a>
+                </li>
+                <li>
+                    <a href="#"><img style="width: 196px;height: 106px;" src="./images/3.jpeg"></a>
+                </li>
+            </ul>
+            <div class="case_btn">
+                <a href="#">VIEW MORE</a>
+            </div>
+        </div>
+    </div>
+    <div id="news" class="container">
+        <div class="area_title">
+            <h2>最新资讯</h2>
+            <p>THE LATEST NEWS</p>
+        </div>
+        <dl>
+            <dt class="l">
+                <img src="./images/dt.jpg" alt="">
+            </dt>
+            <dd class="l">
+                <ul class="news_list">
+                    <li>
+                        <div class="news_date">
+                            <i>09</i>
+                            <span>Jan</span>
+                        </div>
+                        <div class="news_text">
+                            <h3><a href="#">网站排名进入前三的技巧</a></h3>
+                            <p>每一个子网络中，有一台计算机负责管理本网络的所有IP地址，它叫做"DHCP服务器"。新的计算机加入网络……</p>
+                        </div>
+                    </li>
+                    <li>
+                            <div class="news_date">
+                                <i>09</i>
+                                <span>Jan</span>
+                            </div>
+                            <div class="news_text">
+                                <h3><a href="#">网站排名进入前三的技巧</a></h3>
+                                <p>每一个子网络中，有一台计算机负责管理本网络的所有IP地址，它叫做"DHCP服务器"。新的计算机加入网络……</p>
+                            </div>
+                    </li>
+                    <li>
+                            <div class="news_date">
+                                <i>09</i>
+                                <span>Jan</span>
+                            </div>
+                            <div class="news_text">
+                                <h3><a href="#">网站排名进入前三的技巧</a></h3>
+                                <p>每一个子网络中，有一台计算机负责管理本网络的所有IP地址，它叫做"DHCP服务器"。新的计算机加入网络……</p>
+                            </div>
+                    </li>
+                    <li>
+                            <div class="news_date">
+                                <i>09</i>
+                                <span>Jan</span>
+                            </div>
+                            <div class="news_text">
+                                <h3><a href="#">网站排名进入前三的技巧</a></h3>
+                                <p>每一个子网络中，有一台计算机负责管理本网络的所有IP地址，它叫做"DHCP服务器"。新的计算机加入网络……</p>
+                            </div>
+                    </li> 
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>

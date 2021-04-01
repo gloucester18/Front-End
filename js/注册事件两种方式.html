@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>传统注册方式</button>
+    <button>方法监听注册方式</button>
+    <script>
+      var btns = document.querySelectorAll("button");
+      //   传统
+      btns[0].onclick = function() {
+        alert("hi");
+      };
+      btns[0].onclick = function() {
+        alert("how are u");
+      };
+      //   方法监听 addEventListener
+      //   1.里面的事件类型是字符串，需要加引号，不带on
+      //   2.同一个元素/事件可以添加多个侦听器（事件处理程序）
+      btns[1].addEventListener("click", function() {
+        alert(22);
+      });
+      btns[1].addEventListener("click", function() {
+        alert(33);
+      });
+    </script>
+  </body>
+</html>

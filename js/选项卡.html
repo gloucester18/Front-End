@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .active {
+        background-color: yellow;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        display: none;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        // var oDiv = document.getElementById("div1");
+        var aBtn = document.getElementsByTagName("input");
+        var aDiv = document.getElementsByTagName("div");
+        for (var i = 0; i < aBtn.length; i++) {
+          aBtn[i].index = i;
+          aBtn[i].onclick = function() {
+            for (var i = 0; i < aBtn.length; i++) {
+              aBtn[i].className = " ";
+              aDiv[i].style.display = "none";
+            }
+            this.className = "active";
+            aDiv[this.index].style.display = "block";
+          };
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <!-- <div id="div1"> -->
+    <input class="active" type="buttom" id="btn1" value="教育" />
+    <input type="buttom" id="btn2" value="培训" />
+    <input type="buttom" id="btn3" value="招生" />
+    <input type="buttom" id="btn4" value="出国" />
+    <div style="display: block;">1111</div>
+    <div>2222</div>
+    <div>3333</div>
+    <div>4444</div>
+    <!-- </div> -->
+  </body>
+</html>

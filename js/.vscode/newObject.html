@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      function createPerson(name, email) {
+        // 构造函数
+        // 原料
+        var obj = new Object();
+        // 加工
+        obj.name = name;
+        obj.email = email;
+
+        obj.showName = function() {
+          alert("My name is " + this.name);
+        };
+        obj.showEmail = function() {
+          alert("My email is " + this.email);
+        };
+        // 出厂
+        return obj;
+      }
+
+      var obj1 = createPerson("a", "123@gmail.com");
+      var obj2 = createPerson("6", "456@gmail.com");
+
+      alert(obj1);
+      obj1.showEmail();
+    </script>
+  </head>
+  <body></body>
+</html>

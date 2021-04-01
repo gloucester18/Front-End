@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        height: 200px;
+        width: 200px;
+        background-color: rgb(214, 143, 57);
+      }
+    </style>
+    <script>
+      function setStyle(name, value) {
+        var oDiv = document.getElementById("div1");
+        oDiv.style[name] = value;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="buttom" value="变宽" onclick="setStyle('width','400px')" />
+    <input type="buttom" value="变高" onclick="setStyle('height','400px')" />
+    <input
+      type="buttom"
+      value="变绿"
+      onclick="setStyle('background','green')"
+    />
+    <div id="div1"></div>
+  </body>
+</html>

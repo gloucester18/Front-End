@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .right {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="refister">
+      <input type="password" class="ipt" />
+      <p class="message">输入密码</p>
+    </div>
+    <script>
+      var ipt = document.querySelector(".ipt");
+      var message = document.querySelector(".message");
+
+      ipt.onblur = function() {
+        if (this.value.length < 6 || this.value.length > 16) {
+          console.log("wrong");
+        } else {
+          message.className = "message right";
+          message.innerText = "right";
+        }
+      };
+    </script>
+  </body>
+</html>

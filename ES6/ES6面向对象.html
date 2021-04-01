@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        showName() {
+          alert(this.name);
+        }
+        showAge() {
+          alert(this.age);
+        }
+      }
+      class Worker extends Person {
+        constructor(name, age, job) {
+          super(name, age);
+          this.job = job;
+        }
+        showJob() {
+          alert(this.job);
+        }
+      }
+      let worker = new Worker("gjr", 20, "stu");
+      worker.showAge();
+      worker.showJob();
+    </script>
+  </head>
+  <body></body>
+</html>

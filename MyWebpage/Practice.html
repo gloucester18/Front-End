@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="PracticeStyle.css">
+</head>
+<body>
+<!--在html5中，不要使用menu元素代替nav元素进行导航-->
+<!--menu元素用于发出命令的菜单上，使用在web应用程序中-->
+        <nav>
+            <ul>
+                <li><a href="">主页</a></li>  
+                <li><a href="">开发文档</a></li>
+            </ul>
+        </nav>
+    <article>
+        <header>
+            <hgroup>
+                    <h1>html5/css3</h1>
+                    <h2>javascript</h2>
+            </hgroup>
+            <nav>
+                <li><a href="#">html5</a></li>
+                <li><a href="#">css3</a></li>
+            </nav>
+        </header>
+        <section>
+            <h1>html5</h1>
+            <p>...</p>
+        </section>
+        <section>
+            <h1>css3</h1>
+            <p>...</p>
+        </section>
+        <time datetime="2019-09-25" pubdate>快放国庆啦！</time>
+        <footer>
+            <a href="#">插入</a>        
+            <a href="#">删除</a>
+        </footer>
+    </article>
+    <aside>
+        <nav>
+            <h2>Comments</h2>
+            <ul>
+                <li><a href="#">2019-09-25</a></li>
+                <li><a href="#">2020-09-25</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <!--formmethod&formenctype-->
+    <form id="testform">
+        <input type="submit" name="s1" value="v1" formtarget="_blank" formmethod="POST" formaction="">
+        <input type="submit" name="s2" value="v2" formtarget="_self" formmethod="GET" formaction="">
+        <input type="submit" name="s3" value="v3" formtarget="_parent" formmethod="GET" formaction="">
+        <input type="submit" name="s4" value="v4" formtarget="_top" formmethod="GET" formaction="">
+        <input type="submit" name="s5" value="v5" formtarget="framename" formmethod="GET" formaction="">
+
+<!--formenctype 属性规定 当表单数据提交到服务器时如何编码（仅适用于 method="post" 的表单）-->
+        <input type="text" formenctype="text/plain" autofocus>
+        <input type="text" formenctype="multipart/form-data">
+        <input type="text" formenctype="application/x-www-form-urlencoded">
+    </form>
+
+    <br><br>
+
+    <script>
+        function setValue(){
+            var label = document.getElementById("label");
+            var textbox = label.control;
+            textbox.value = "010010";
+        }
+    </script>
+    <form>
+        <label id="label">
+            邮编:<input id="txt_zip" maxlength="6" placeholder="请输入邮编" autocomplete="on">
+            <small>请输入六位数字</small>
+            <input type="button" value="设置默认值" onclick="setValue()">
+        </label>
+    </form>
+
+    <br><br>
+
+    <form>
+        <input type="text" name="greeting" list="greetings">
+        <datalist id="greetings" style="display: none"> 
+            <option value="html5">html5</option>
+            <option value="css3">css3</option>
+            <option value="js">js</option>
+        </datalist>
+    </form>
+
+    <!--indeterminate-->
+    <input type="checkbox" indeterminate id="cd">test
+    <script>
+        var cd = document.getElementById("cd");
+        cd.indeterminate = true;
+    </script>
+
+    <!--image-->
+    <form action="test.jsp" method="POST">
+        name:<input type="text" name="name">
+        <input type="image" src="4.jpg" alt="L" width="60" height="60">
+        <!--alt为图像输入规定替代文本-->
+    </form>
+
+    <!--以下是css的test-->
+    <p id="pid">hello css</a></p>
+    <div id="divid">
+        <p>This is our first div.</p>
+    </div>
+    <!--css属性选择器-->
+    <p title="t">属性选择器</p>
+    <p title="te">属性和值选择器</p>
+    <a href="https://www.w3school.com.cn/css/css_selector_attribute.asp" title="css">属性选择器</a>
+    <a href="https://www.w3school.com.cn/css/" >css</a>
+
+    <br><br>
+    <img src="WechatIMG1.jpeg" alt="cat">
+    <br><br>
+    <planet>Venus</planet>
+    <planet moons="1">Earth</planet>
+    <planet moons="2">Mars</planet>
+
+    <!--使用 <span> 来组合行内元素，以便通过样式来格式化它们-->
+    <p class="span"><span>如果不对 span 应用样式，span元素中的文本与其他文本不会任何视觉上的差异，但span元素为p元素增加了额外的结构。</span><br>可以为span应用id或class属性，这样既可以增加适当的语义，又便于对span应用样式。</p>
+
+    <p lang="en">Hello!</p>
+    <p lang="en-us">Greetings!</p>
+    <p lang="en-au">G'day!</p>
+    <p lang="fr">Bonjour!</p>
+    <p lang="cy-en">Jrooana!</p>
+    
+    <p id="p1">this Is my Webpage</p>
+    <p id="p2">this Is my Webpage</p>
+    <p id="p3">this Is my Webpage</p>
+    <!--瀑布流-->
+    <div id="div1">
+        <ul>
+            <li><img src="img/1.jpg"></li>
+            <li><img src="img/2.jpg"></li>
+            <li><img src="img/3.jpg"></li>
+        </ul>
+        <ul>
+            <li><img src="img/1.jpg"></li>
+            <li><img src="img/2.jpg"></li>
+            <li><img src="img/3.jpg"></li>
+        </ul>
+        
+    </div>
+    <br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--盒子模型-->
+    <div class="container">
+        <div class="bd"><!--边框-->
+            <div class="pd"><!--内边距-->
+                <div class="content">Hello!</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="bd1"><!--边框-->
+            <div class="pd1"><!--内边距-->
+                <div class="content1">Hello!</div>
+            </div>
+        </div>
+    </div>
+<footer>
+    <p><small><dfn>-版权声明-</dfn></small></p>
+</footer>
+</body>
+</html>

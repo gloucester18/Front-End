@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      ul {
+        margin-top: 50px;
+      }
+      li {
+        width: 300px;
+        padding: 5px;
+        background-color: rgb(223, 223, 169);
+        font-size: 14px;
+        margin: 15px 0;
+      }
+      li a {
+        float: right;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        var ul = document.querySelector("ul");
+        var btn = document.querySelector("button");
+        var text = document.querySelector("textarea");
+        btn.onclick = function() {
+          if (text.value == "") {
+            alert("您没有输入内容");
+            return false;
+          } else {
+            var li = document.createElement("li");
+            li.innerHTML = text.value + "<a href='javascript:;'>delete</a>";
+            ul.insertBefore(li, ul.children[0]);
+            var as = document.querySelectorAll("a");
+            for (var i = 0; i < as.length; i++) {
+              as[i].onclick = function() {
+                ul.removeChild(this.parentNode);
+              };
+            }
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <textarea name="" id=""></textarea>
+    <button>post</button>
+    <ul></ul>
+  </body>
+</html>

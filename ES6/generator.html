@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function* show() {
+        alert("aaa");
+        yield 1;
+        alert("bbb");
+        return 2;
+      }
+      let gen = show();
+      let res1 = gen.next();
+      console.log(res1);
+      let res2 = gen.next();
+      console.log(res2);
+    </script>
+  </head>
+  <body></body>
+</html>
